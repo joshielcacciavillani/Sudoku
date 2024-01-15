@@ -1,0 +1,24 @@
+﻿@page
+@model Sudoku.Pages.SudokuModel
+@{
+}
+
+<head>
+    <title>Sudoku Web Page</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div id="sudoku-grid">
+        @for (var i = 0; i < Model.SudokuPuzzle.Length; i++)
+        {
+            <div class="sudoku-row">
+                @for (var j = 0; j < Model.SudokuPuzzle[i].Length; j++)
+                {
+                    <div class="sudoku-cell">
+                        @Model.SudokuPuzzle[i][j]
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</body>
